@@ -1,0 +1,224 @@
+/* Deals Hero Section */
+.deals-hero {
+    background: linear-gradient(135deg, #6b46c1 0%, #805ad5 100%);
+    padding: 6rem 5% 4rem;
+    min-height: auto;
+}
+
+/* Deals Filters */
+.deals-filters {
+    background-color: white;
+    padding: 2rem 5%;
+    box-shadow: var(--shadow);
+}
+
+.filter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Deals Grid */
+.deals-grid {
+    padding: 4rem 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.deal-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.deal-card:hover {
+    transform: translateY(-5px);
+}
+
+.deal-image {
+    position: relative;
+    height: 200px;
+}
+
+.deal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.deal-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.deal-content {
+    padding: 1.5rem;
+}
+
+.deal-content h3 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+.deal-description {
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.deal-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.deal-details span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.deal-details i {
+    color: var(--primary-color);
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    padding: 4rem 5%;
+    text-align: center;
+    color: white;
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-form button {
+    padding: 1rem 2rem;
+    white-space: nowrap;
+}
+
+/* Hide/Show Deals based on Filter */
+.deal-card.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .deals-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem 5%;
+    }
+
+    .deal-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Animation for Deal Cards */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.deal-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Hover Effects */
+.deal-card .btn-primary {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.deal-card .btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.newsletter-form button:hover {
+    transform: translateY(-2px);
+}

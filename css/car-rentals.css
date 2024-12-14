@@ -1,0 +1,199 @@
+/* Car Rentals specific styles */
+.car-hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #27ae60 100%);
+}
+
+.car-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Return Location Toggle */
+.return-location-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.return-location-toggle input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+.return-location-toggle label {
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Date and Time Input */
+.datetime-input {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0.5rem;
+}
+
+.datetime-input input,
+.datetime-input select {
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Popular Cars Section */
+.popular-cars {
+    padding: 4rem 5%;
+    background-color: white;
+}
+
+.popular-cars h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.car-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+    background: white;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.car-info {
+    padding: 1.5rem;
+}
+
+.car-info h3 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.car-info p {
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.car-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.car-features span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.car-features i {
+    color: var(--primary-color);
+}
+
+/* Location Suggestions */
+.location-suggestions {
+    position: absolute;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: var(--shadow);
+    margin-top: 4px;
+}
+
+.location-suggestions li {
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.location-suggestions li:last-child {
+    border-bottom: none;
+}
+
+.location-suggestions li:hover {
+    background-color: var(--light-gray);
+}
+
+.location-suggestions .location-name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.location-suggestions .location-details {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Active states for form elements */
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .car-card img {
+        height: 180px;
+    }
+
+    .car-form {
+        padding: 1rem;
+    }
+
+    .datetime-input {
+        grid-template-columns: 1fr;
+    }
+
+    .car-features {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

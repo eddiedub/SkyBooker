@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBooker - Special Deals</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/deals.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>SkyBooker</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Flights</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="car-rentals.html">Car Rentals</a></li>
+                <li><a href="deals.html" class="active">Deals</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn-secondary" onclick="window.location.href='signin.html'">Sign In</button>
+                <button class="btn-primary" onclick="window.location.href='register.html'">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero deals-hero">
+            <div class="hero-content">
+                <h1>Exclusive Travel Deals</h1>
+                <p>Save big on flights, hotels, and car rentals with our special offers</p>
+            </div>
+        </section>
+
+        <section class="deals-filters">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Deals</button>
+                <button class="filter-btn" data-filter="flights">Flight Deals</button>
+                <button class="filter-btn" data-filter="hotels">Hotel Deals</button>
+                <button class="filter-btn" data-filter="cars">Car Rental Deals</button>
+                <button class="filter-btn" data-filter="packages">Vacation Packages</button>
+            </div>
+        </section>
+
+        <section class="deals-grid">
+            <!-- Flight Deals -->
+            <div class="deal-card flights">
+                <div class="deal-image">
+                    <img src="https://images.pexels.com/photos/379419/pexels-photo-379419.jpeg" alt="Flight Deal">
+                    <div class="deal-tag">Save 30%</div>
+                </div>
+                <div class="deal-content">
+                    <h3>New York to Paris</h3>
+                    <p class="deal-description">Round-trip flights starting at $499</p>
+                    <div class="deal-details">
+                        <span><i class="fas fa-calendar-alt"></i> Book by Mar 31</span>
+                        <span><i class="fas fa-plane"></i> Travel Apr-Jun</span>
+                    </div>
+                    <button class="btn-primary">View Deal</button>
+                </div>
+            </div>
+
+            <!-- Hotel Deals -->
+            <div class="deal-card hotels">
+                <div class="deal-image">
+                    <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg" alt="Hotel Deal">
+                    <div class="deal-tag">Save 25%</div>
+                </div>
+                <div class="deal-content">
+                    <h3>Luxury Beach Resort</h3>
+                    <p class="deal-description">5-star beachfront stays from $199/night</p>
+                    <div class="deal-details">
+                        <span><i class="fas fa-calendar-alt"></i> Book by Apr 15</span>
+                        <span><i class="fas fa-bed"></i> Stay May-Aug</span>
+                    </div>
+                    <button class="btn-primary">View Deal</button>
+                </div>
+            </div>
+
+            <!-- Car Rental Deals -->
+            <div class="deal-card cars">
+                <div class="deal-image">
+                    <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg" alt="Car Rental Deal">
+                    <div class="deal-tag">Save 20%</div>
+                </div>
+                <div class="deal-content">
+                    <h3>Premium Car Rentals</h3>
+                    <p class="deal-description">Luxury vehicles from $59/day</p>
+                    <div class="deal-details">
+                        <span><i class="fas fa-calendar-alt"></i> Book by Mar 31</span>
+                        <span><i class="fas fa-car"></i> Rent Apr-Jun</span>
+                    </div>
+                    <button class="btn-primary">View Deal</button>
+                </div>
+            </div>
+
+            <!-- Vacation Package -->
+            <div class="deal-card packages">
+                <div class="deal-image">
+                    <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg" alt="Vacation Package">
+                    <div class="deal-tag">Save 35%</div>
+                </div>
+                <div class="deal-content">
+                    <h3>Caribbean Getaway</h3>
+                    <p class="deal-description">Flight + Hotel + Car from $899</p>
+                    <div class="deal-details">
+                        <span><i class="fas fa-calendar-alt"></i> Book by Apr 30</span>
+                        <span><i class="fas fa-umbrella-beach"></i> Travel May-Sep</span>
+                    </div>
+                    <button class="btn-primary">View Deal</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Get Exclusive Deals</h2>
+                <p>Subscribe to our newsletter and never miss out on special offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-tag"></i>
+                <h3>Best Deals Guaranteed</h3>
+                <p>We constantly update our offers to bring you the best prices</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock"></i>
+                <h3>Limited Time Offers</h3>
+                <p>Don't miss out on these exclusive time-sensitive deals</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Booking</h3>
+                <p>Book with confidence with our secure payment system</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SkyBooker</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SkyBooker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/deals.js"></script>
+</body>
+</html>

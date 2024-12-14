@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBooker - Frequently Asked Questions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/faqs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>SkyBooker</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Flights</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="car-rentals.html">Car Rentals</a></li>
+                <li><a href="deals.html">Deals</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn-secondary" onclick="window.location.href='signin.html'">Sign In</button>
+                <button class="btn-primary" onclick="window.location.href='register.html'">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="faq-main">
+        <section class="faq-hero">
+            <div class="hero-content">
+                <h1>Frequently Asked Questions</h1>
+                <p>Find answers to common questions about our services</p>
+                <div class="search-container">
+                    <input type="text" placeholder="Search FAQs..." id="faq-search">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-categories">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="general">General</button>
+                <button class="tab-btn" data-category="flights">Flights</button>
+                <button class="tab-btn" data-category="hotels">Hotels</button>
+                <button class="tab-btn" data-category="cars">Car Rentals</button>
+                <button class="tab-btn" data-category="payment">Payment</button>
+            </div>
+
+            <div class="faq-container">
+                <!-- General FAQs -->
+                <div class="faq-category active" id="general">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I create an account?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To create an account, click on the "Register" button in the top right corner. Fill in your details, including your email address and password. You'll receive a confirmation email to verify your account.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What are the benefits of creating an account?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>With a SkyBooker account, you can:</p>
+                            <ul>
+                                <li>Save your payment information for faster booking</li>
+                                <li>Access exclusive member-only deals</li>
+                                <li>Track your bookings and travel history</li>
+                                <li>Earn rewards points on every booking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flight FAQs -->
+                <div class="faq-category" id="flights">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How can I change or cancel my flight booking?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To modify or cancel your flight booking:</p>
+                            <ol>
+                                <li>Log into your account</li>
+                                <li>Go to "My Bookings"</li>
+                                <li>Select the flight you want to modify</li>
+                                <li>Click on "Change Flight" or "Cancel Flight"</li>
+                                <li>Follow the instructions to complete the process</li>
+                            </ol>
+                            <p>Note: Fees may apply depending on the airline's policy and your ticket type.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is your baggage policy?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Baggage allowances vary by airline and ticket class. You can view the specific baggage policy for your flight during the booking process. Generally, most airlines allow:</p>
+                            <ul>
+                                <li>One carry-on bag (up to 7-10kg)</li>
+                                <li>One personal item (purse, laptop bag, etc.)</li>
+                                <li>Checked baggage depending on your ticket type</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel FAQs -->
+                <div class="faq-category" id="hotels">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I modify my hotel reservation?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can modify your hotel reservation through your account dashboard. Changes to dates, room types, and guest numbers are subject to availability and may affect the price.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is the check-in/check-out policy?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Standard check-in time is typically 3:00 PM, and check-out is by 11:00 AM. However, these times may vary by hotel. Early check-in and late check-out may be available upon request, subject to availability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Rental FAQs -->
+                <div class="faq-category" id="cars">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What documents do I need to rent a car?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Required documents typically include:</p>
+                            <ul>
+                                <li>Valid driver's license</li>
+                                <li>Credit card in the driver's name</li>
+                                <li>Proof of insurance</li>
+                                <li>Additional ID may be required for international rentals</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is insurance included in the rental price?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Basic insurance is typically included in the rental price. Additional coverage options are available during the booking process. We recommend reviewing the insurance options carefully before confirming your reservation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment FAQs -->
+                <div class="faq-category" id="payment">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What payment methods do you accept?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept the following payment methods:</p>
+                            <ul>
+                                <li>Major credit cards (Visa, MasterCard, American Express)</li>
+                                <li>Debit cards</li>
+                                <li>PayPal</li>
+                                <li>Digital wallets (Apple Pay, Google Pay)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do refunds work?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Refund policies vary depending on the service and booking conditions. Generally:</p>
+                            <ul>
+                                <li>Refunds are processed within 5-10 business days</li>
+                                <li>The amount refunded depends on cancellation timing and policy</li>
+                                <li>Refunds are issued to the original payment method</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="still-need-help">
+            <h2>Still Have Questions?</h2>
+            <p>Our support team is here to help you 24/7</p>
+            <div class="help-options">
+                <a href="contact.html" class="btn-primary">Contact Support</a>
+                <a href="support.html" class="btn-secondary">Visit Help Center</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SkyBooker</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SkyBooker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/faqs.js"></script>
+</body>
+</html>

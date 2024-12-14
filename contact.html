@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBooker - Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>SkyBooker</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Flights</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="car-rentals.html">Car Rentals</a></li>
+                <li><a href="deals.html">Deals</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn-secondary" onclick="window.location.href='signin.html'">Sign In</button>
+                <button class="btn-primary" onclick="window.location.href='register.html'">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-hero">
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+                <p>We're here to help with any questions or concerns</p>
+            </div>
+        </section>
+
+        <section class="contact-options">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Live Chat</h3>
+                    <p>Chat with our support team in real-time</p>
+                    <p class="availability">Available 24/7</p>
+                    <button class="btn-primary start-chat">Start Chat</button>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone Support</h3>
+                    <p>Speak directly with our support team</p>
+                    <p class="phone-number">1-800-SKY-BOOK</p>
+                    <p class="availability">24/7 Toll-free support</p>
+                    <button class="btn-primary">Call Now</button>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Support</h3>
+                    <p>We'll respond within 24 hours</p>
+                    <p class="email">support@skybooker.com</p>
+                    <button class="btn-primary">Send Email</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="form-container">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and we'll get back to you as soon as possible</p>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="booking">Booking Reference (Optional)</label>
+                            <input type="text" id="booking" name="booking">
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select a category</option>
+                                <option value="flights">Flights</option>
+                                <option value="hotels">Hotels</option>
+                                <option value="cars">Car Rentals</option>
+                                <option value="account">Account Issues</option>
+                                <option value="payment">Payment Issues</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-group attachment">
+                        <label for="attachment">
+                            <i class="fas fa-paperclip"></i> Attach Files (Optional)
+                        </label>
+                        <input type="file" id="attachment" name="attachment" multiple>
+                        <p class="file-info">Max file size: 10MB. Supported formats: jpg, png, pdf</p>
+                    </div>
+
+                    <button type="submit" class="btn-primary submit-btn">
+                        Send Message
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="faq-preview">
+            <div class="faq-content">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find quick answers to common questions</p>
+                <div class="quick-faq-grid">
+                    <div class="faq-item">
+                        <h3>How do I track my booking?</h3>
+                        <p>You can track your booking by logging into your account and visiting the "My Bookings" section.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What's your cancellation policy?</h3>
+                        <p>Cancellation policies vary by booking. You can find specific details in your booking confirmation.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How do I request a refund?</h3>
+                        <p>To request a refund, log into your account, go to "My Bookings," and select the "Request Refund" option.</p>
+                    </div>
+                </div>
+                <a href="faqs.html" class="btn-secondary">View All FAQs</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SkyBooker</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SkyBooker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-header">
+            <h3>Live Chat</h3>
+            <button class="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages">
+            <div class="message system">
+                Welcome to SkyBooker Support! An agent will be with you shortly.
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message...">
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

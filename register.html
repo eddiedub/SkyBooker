@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBooker - Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>SkyBooker</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Flights</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="car-rentals.html">Car Rentals</a></li>
+                <li><a href="deals.html">Deals</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn-secondary" onclick="window.location.href='signin.html'">Sign In</button>
+                <button class="btn-primary" onclick="window.location.href='register.html'">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-container">
+            <div class="auth-box">
+                <h2>Create Your Account</h2>
+                <p class="auth-subtitle">Join SkyBooker to start booking your travels</p>
+
+                <form id="register-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="fullname"><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="fullname" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Password</label>
+                        <div class="password-input">
+                            <input type="password" id="password" required placeholder="Create a password">
+                            <button type="button" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-requirements">
+                            <p>Password must contain:</p>
+                            <ul>
+                                <li id="length">At least 8 characters</li>
+                                <li id="uppercase">One uppercase letter</li>
+                                <li id="lowercase">One lowercase letter</li>
+                                <li id="number">One number</li>
+                                <li id="special">One special character</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+                        <div class="password-input">
+                            <input type="password" id="confirm-password" required placeholder="Confirm your password">
+                            <button type="button" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">Send me travel deals and special offers</label>
+                    </div>
+
+                    <button type="submit" class="btn-primary auth-submit">Create Account</button>
+                </form>
+
+                <div class="auth-divider">
+                    <span>or register with</span>
+                </div>
+
+                <div class="social-auth">
+                    <button class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        Continue with Google
+                    </button>
+                    <button class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Continue with Facebook
+                    </button>
+                </div>
+
+                <p class="auth-switch">
+                    Already have an account? <a href="signin.html">Sign In</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SkyBooker</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SkyBooker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

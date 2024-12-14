@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBooker - Airport Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>SkyBooker</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Flights</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="car-rentals.html">Car Rentals</a></li>
+                <li><a href="deals.html">Deals</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn-secondary" onclick="window.location.href='signin.html'">Sign In</button>
+                <button class="btn-primary" onclick="window.location.href='register.html'">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Find Your Perfect Flight</h1>
+                <p>Search and compare flights from hundreds of airlines worldwide</p>
+            </div>
+
+            <div class="booking-form">
+                <div class="trip-type">
+                    <label class="radio-container">
+                        <input type="radio" name="trip-type" value="round-trip" checked>
+                        Round Trip
+                    </label>
+                    <label class="radio-container">
+                        <input type="radio" name="trip-type" value="one-way">
+                        One Way
+                    </label>
+                    <label class="radio-container">
+                        <input type="radio" name="trip-type" value="multi-city">
+                        Multi-City
+                    </label>
+                </div>
+
+                <div class="search-grid">
+                    <div class="form-group">
+                        <label><i class="fas fa-plane-departure"></i> From</label>
+                        <input type="text" id="origin" placeholder="City or Airport">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-plane-arrival"></i> To</label>
+                        <input type="text" id="destination" placeholder="City or Airport">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="far fa-calendar-alt"></i> Departure</label>
+                        <input type="date" id="departure-date">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="far fa-calendar-alt"></i> Return</label>
+                        <input type="date" id="return-date">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-user-friends"></i> Passengers & Class</label>
+                        <div class="passenger-select" id="passenger-select">
+                            <span>1 Adult, Economy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advanced-options">
+                    <div class="form-group">
+                        <label><i class="fas fa-suitcase"></i> Baggage</label>
+                        <select id="baggage">
+                            <option value="carry-on">Carry-on Only</option>
+                            <option value="checked">Checked Baggage</option>
+                            <option value="extra">Extra Baggage</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-chair"></i> Seat Preference</label>
+                        <select id="seat-preference">
+                            <option value="no-preference">No Preference</option>
+                            <option value="window">Window</option>
+                            <option value="aisle">Aisle</option>
+                            <option value="extra-legroom">Extra Legroom</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="search-btn">Search Flights</button>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Booking</h3>
+                <p>Your payment and personal information are always protected</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Best Price Guarantee</h3>
+                <p>Find a lower price? We'll match it!</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our travel experts are here to help anytime</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SkyBooker</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SkyBooker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Passenger Selection Modal -->
+    <div class="modal" id="passenger-modal">
+        <div class="modal-content">
+            <h3>Passengers & Class</h3>
+            <div class="passenger-type">
+                <span>Adults</span>
+                <div class="number-input">
+                    <button class="minus">-</button>
+                    <input type="number" value="1" min="1" max="9">
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="passenger-type">
+                <span>Children</span>
+                <div class="number-input">
+                    <button class="minus">-</button>
+                    <input type="number" value="0" min="0" max="9">
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="passenger-type">
+                <span>Infants</span>
+                <div class="number-input">
+                    <button class="minus">-</button>
+                    <input type="number" value="0" min="0" max="9">
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="class-select">
+                <label>Class</label>
+                <select>
+                    <option value="economy">Economy</option>
+                    <option value="premium-economy">Premium Economy</option>
+                    <option value="business">Business</option>
+                    <option value="first">First Class</option>
+                </select>
+            </div>
+            <button class="btn-primary" id="apply-passenger-selection">Apply</button>
+        </div>
+    </div>
+
+    <script src="js/airports.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
+</body>
+</html>

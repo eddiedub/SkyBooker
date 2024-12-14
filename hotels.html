@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBooker - Hotel Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hotels.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>SkyBooker</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Flights</a></li>
+                <li><a href="hotels.html" class="active">Hotels</a></li>
+                <li><a href="car-rentals.html">Car Rentals</a></li>
+                <li><a href="deals.html">Deals</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn-secondary" onclick="window.location.href='signin.html'">Sign In</button>
+                <button class="btn-primary" onclick="window.location.href='register.html'">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero hotel-hero">
+            <div class="hero-content">
+                <h1>Find Your Perfect Stay</h1>
+                <p>Search and compare hotels worldwide for your next trip</p>
+            </div>
+
+            <div class="booking-form hotel-form">
+                <div class="search-grid">
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Destination</label>
+                        <input type="text" id="destination" placeholder="City, landmark, or property">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="far fa-calendar-alt"></i> Check-in</label>
+                        <input type="date" id="check-in-date">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="far fa-calendar-alt"></i> Check-out</label>
+                        <input type="date" id="check-out-date">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-user-friends"></i> Guests & Rooms</label>
+                        <div class="guest-select" id="guest-select">
+                            <span>2 Adults, 1 Room</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advanced-options">
+                    <div class="form-group">
+                        <label><i class="fas fa-star"></i> Star Rating</label>
+                        <select id="star-rating">
+                            <option value="any">Any Rating</option>
+                            <option value="5">5 Stars</option>
+                            <option value="4">4+ Stars</option>
+                            <option value="3">3+ Stars</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-dollar-sign"></i> Price Range</label>
+                        <select id="price-range">
+                            <option value="any">Any Price</option>
+                            <option value="budget">Budget</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="luxury">Luxury</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-building"></i> Property Type</label>
+                        <select id="property-type">
+                            <option value="any">Any Type</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="resort">Resort</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="villa">Villa</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="search-btn">Search Hotels</button>
+            </div>
+        </section>
+
+        <section class="popular-destinations">
+            <h2>Popular Destinations</h2>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?paris" alt="Paris">
+                    <div class="destination-info">
+                        <h3>Paris</h3>
+                        <p>1,234 properties</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?new-york" alt="New York">
+                    <div class="destination-info">
+                        <h3>New York</h3>
+                        <p>2,567 properties</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?tokyo" alt="Tokyo">
+                    <div class="destination-info">
+                        <h3>Tokyo</h3>
+                        <p>1,890 properties</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://source.unsplash.com/800x600/?dubai" alt="Dubai">
+                    <div class="destination-info">
+                        <h3>Dubai</h3>
+                        <p>945 properties</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Best Price Guarantee</h3>
+                <p>Find a lower price? We'll match it!</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock"></i>
+                <h3>Free Cancellation</h3>
+                <p>Flexible booking options on most hotels</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our travel experts are here to help</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SkyBooker</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SkyBooker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Guest Selection Modal -->
+    <div class="modal" id="guest-modal">
+        <div class="modal-content">
+            <h3>Guests & Rooms</h3>
+            <div class="guest-type">
+                <span>Adults</span>
+                <div class="number-input">
+                    <button class="minus">-</button>
+                    <input type="number" value="2" min="1" max="10">
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="guest-type">
+                <span>Children</span>
+                <div class="number-input">
+                    <button class="minus">-</button>
+                    <input type="number" value="0" min="0" max="6">
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="guest-type">
+                <span>Rooms</span>
+                <div class="number-input">
+                    <button class="minus">-</button>
+                    <input type="number" value="1" min="1" max="5">
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <button class="btn-primary" id="apply-guest-selection">Apply</button>
+        </div>
+    </div>
+
+    <script src="js/hotels.js" type="module"></script>
+</body>
+</html>
